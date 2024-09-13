@@ -295,6 +295,7 @@
         async function displayProjects(projects) {
             loadingElement.style.display = 'none';
             for (const project of projects) {
+                if (project.name === 'meenaviyal.github.io') continue;
                 const projectUrl = `https://meenaviyal.com/${project.name}`;
                 const pageExists = await checkPageExists(projectUrl);
                 
